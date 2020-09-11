@@ -41,16 +41,9 @@ class UpdateCpu extends Component {
         event.preventDefault();
 
         let url1 = "http://localhost:8080/v1/CPUs/" + this.state.Id;
-        // let option = {
-        //     method: 'POST',
-        //     body: JSON.stringify(this.state),
-        //     headers: {
-        //         'Content-Type': 'application/json'
-        //     },
-        // }
+
         fetch(url1)
             .then(response => response.json())
-            // .then((data)=>console.log(data))
             .then(data => this.setState({
                 price:data.result.price,
                 label: data.result.label,
