@@ -20,7 +20,6 @@ class List extends Component {
                     <td>
                         <Link to={`/CPUs/${item.id}/edit`}>Edit</Link> {" | "}
                         <a href={"#"} onClick={(e) => {
-                            // eslint-disable-next-line no-restricted-globals
                             if(confirm("Please confirm you want to delete this record " + item.id)){
                                 console.log("process delete");
                                 fetch("http://localhost:8080/v1/CPUs/"+item.id, {method: 'DELETE'})
